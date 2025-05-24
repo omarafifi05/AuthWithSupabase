@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import supabase from '../helper/SupabaseClient';
 import { Link,useNavigate } from 'react-router-dom';
+import gifVideo from '../assets/gif.mp4'; // Adjust the path as necessary
 function Dashboard() {
     const navigate = useNavigate();
     const signout = async () => {
@@ -17,6 +18,14 @@ function Dashboard() {
 
   return (
     <div>
+<video
+  src={gifVideo}
+  autoPlay
+  loop
+  muted
+  playsInline
+  style={{ width: '300px', height: 'auto' }}
+/>
       <h1>Dashboard</h1>
       <p>Welcome to your dashboard!</p>
       <p>Here you can manage your account settings, view your activity, and more.</p>
